@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build output and packaged releases
+dist/
+release/
+send-to-*/
+*.zip
+*.7z
+*.rar
+
+# Local Electron/build caches
+.electron/
+.cache/
+
+# Debug screenshots and local test artifacts
+debug-screen*.png
+ИНСТРУКЦИЯ_КАК_СЫГРАТЬ_ОНЛАЙН.md
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS/editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/

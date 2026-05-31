@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Checkers</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="side">
+        <div>
+          <p class="eyebrow">Desktop online</p>
+          <h1>Шашки</h1>
+          <p class="subtitle">Создай комнату или подключись к другу по адресу сервера.</p>
+        </div>
+
+        <div class="panel">
+          <label>
+            Сервер
+            <input id="serverUrl" value="ws://localhost:8787" autocomplete="off" spellcheck="false" />
+          </label>
+          <div class="row">
+            <button id="hostBtn" class="primary">Хостить</button>
+            <button id="createBtn">Создать</button>
+          </div>
+          <label>
+            Код комнаты
+            <input id="roomCode" placeholder="ABCDE" autocomplete="off" spellcheck="false" />
+          </label>
+          <button id="joinBtn">Подключиться</button>
+        </div>
+
+        <div class="panel compact">
+          <div class="kv"><span>Статус</span><strong id="status">Не подключено</strong></div>
+          <div class="kv"><span>Комната</span><strong id="roomLabel">-</strong></div>
+          <div class="kv"><span>Вы</span><strong id="playerLabel">-</strong></div>
+          <div class="kv"><span>Ход</span><strong id="turnLabel">Красные</strong></div>
+        </div>
+
+        <div class="panel compact">
+          <button id="newGameBtn">Новая партия</button>
+          <button id="copyBtn">Скопировать приглашение</button>
+          <p id="hostInfo" class="hint"></p>
+        </div>
+      </section>
+
+      <section class="boardShell">
+        <div class="topbar">
+          <div>
+            <p class="eyebrow">Партия</p>
+            <h2 id="message">Ожидание подключения</h2>
+          </div>
+          <div class="score">
+            <span id="redScore">12</span>
+            <span>:</span>
+            <span id="blackScore">12</span>
+          </div>
+        </div>
+        <div id="board" class="board" aria-label="Доска"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

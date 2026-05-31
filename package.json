@@ -1,0 +1,45 @@
+{
+  "name": "desktop-checkers-online",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop online checkers game for two players.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "server": "node src/server.js",
+    "build": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "local.checkers.online",
+    "productName": "Checkers Online",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "assets/checkers-icon.ico",
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "portable": {
+      "artifactName": "Checkers Online.exe"
+    }
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^42.3.0",
+    "electron-builder": "^26.0.12"
+  }
+}
